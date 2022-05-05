@@ -15,14 +15,14 @@ function App() {
     { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },
   ]);
 
-  const [currentCategory, setCurrentCategory] = useState(categories[1]);
+  const [currentCategory, setCurrentCategory] = useState(categories[2]);
   return (
     <div>
       <Nav categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory} />
       <main>
-        <Gallery />
+        <Gallery currentCategory={currentCategory} />
         <About />
       </main>
     </div>
